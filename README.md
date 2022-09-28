@@ -1,4 +1,4 @@
-企创IVoice音频广告sdk文档
+IVoice音频广告sdk文档
 
 一、项目介绍
     项目主要功能为adlibrary这个model文件，simple为sdk的示例工程
