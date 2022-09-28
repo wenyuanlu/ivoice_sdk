@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--zj-->
+    <external-path
+        name="qc_down_path"
+        path="qc_ad_download" />
+    <external-files-path
+        name="qc_down_file_path"
+        path="qc_ad_download" />
+
+</paths>

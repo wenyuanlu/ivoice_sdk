@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/voice_bottom_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/voice_icon_bottom_back" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <ImageView
+            android:id="@+id/voice_icon_gif"
+            android:layout_width="100dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/qcad_icon_praise_choose" />
+
+        <ImageView
+            android:id="@+id/voice_rotate_view"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/yaoyiyao" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/voice_icon_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/drawable_voice_icon_bottom_shape"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="1dp"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        tools:text="8s后关闭" />
+
+</FrameLayout>

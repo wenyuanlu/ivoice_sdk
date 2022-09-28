@@ -1,0 +1,2 @@
+include ':simple', ':adlibrary'
+rootProject.name='adv_audio_sdk_android'

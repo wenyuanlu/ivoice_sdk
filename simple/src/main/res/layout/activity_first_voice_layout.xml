@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/first_voice_ad_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout style="@style/menuLayoutStyle">
+
+            <TextView
+                android:id="@+id/first_voice_ad_load"
+                style="@style/menuStyle"
+                android:text="加载广告" />
+
+            <TextView
+                android:id="@+id/first_voice_ad_show"
+                style="@style/menuStyle"
+                android:text="播放广告" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/menuLayoutStyle">
+
+            <TextView
+                android:id="@+id/first_voice_ad_stop"
+                style="@style/menuStyle"
+                android:text="停止广告" />
+
+            <TextView
+                android:id="@+id/first_voice_ad_clear"
+                style="@style/menuStyle"
+                android:text="清除广告" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/first_voice_ad_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_voice_ad_root"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#333333"
+        android:textSize="14dp"
+        tools:text="当前广告状态:onAdReceive" />
+
+    <LinearLayout
+        android:id="@+id/first_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom" />
+
+</RelativeLayout>

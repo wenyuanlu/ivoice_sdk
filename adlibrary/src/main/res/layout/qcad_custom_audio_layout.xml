@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF">
+
+    <ImageView
+        android:id="@+id/iv_qcad_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CB000000"
+        android:scaleType="centerCrop" />
+
+    <!--封面图 最下方-->
+    <com.corpize.sdk.ivoice.view.QcadImageView
+        android:id="@+id/qcad_cover_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ad_test"
+        app:radius="10000dp"
+        app:shape_type="rectangle" />
+
+    <!--封面上方播放按钮 放到了最下方-->
+
+    <com.corpize.sdk.ivoice.danmuku.DanMuView
+        android:id="@+id/qcad_danmu_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--标题-->
+    <TextView
+        android:id="@+id/qcad_custom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <!--内容-->
+    <TextView
+        android:id="@+id/qcad_custom_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qcad_custom_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="50dp"
+        android:text=""
+        android:textColor="#6D6D6D"
+        android:textSize="14sp" />
+
+    <!--左下角的图文弹窗具体的展示 小-->
+    <RelativeLayout
+        android:id="@+id/rl_qcad_info_small"
+        android:layout_width="315dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@+id/qcad_barrage_image"
+        android:background="@drawable/qcad_shape_info_background"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.corpize.sdk.ivoice.view.RoundImageView
+                android:id="@+id/qcad_info_small_logo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ad_test" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/qcad_info_small_logo"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qcad_info_small_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/qcad_info_small_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/qcad_info_small_click"
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="14dp"
+                android:background="#FFFF42A1"
+                android:gravity="center"
+                android:text="立即下载"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/qcad_info_small_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/qcad_icon_info_close" />
+
+        <ImageView
+            android:id="@+id/qcad_info_small_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="4dp"
+            android:background="#00000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="广告"
+            android:textColor="#D0D0D0"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--弹幕的图标展示-->
+    <ImageView
+        android:id="@+id/qcad_barrage_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/qcad_icon_barrage" />
+
+    <!--弹幕数量-->
+    <TextView
+        android:id="@+id/qcad_barrage_number"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <!--点赞的图标展示-->
+    <ImageView
+        android:id="@+id/qcad_praise_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="130dp"
+        android:src="@drawable/qcad_icon_praise_default" />
+
+    <!--点赞数量-->
+    <TextView
+        android:id="@+id/qcad_praise_number"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="110dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <!--head的展示-->
+    <RelativeLayout
+        android:id="@+id/qcad_head_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="190dp"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants">
+
+        <com.corpize.sdk.ivoice.view.QcadImageView
+            android:id="@+id/qcad_head_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ad_test"
+            app:radius="1000dp"
+            app:shape_type="rectangle" />
+
+        <ImageView
+            android:id="@+id/qcad_head_link"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:clickable="false"
+            android:src="@drawable/qcad_icon_head_link" />
+
+    </RelativeLayout>
+
+    <!--封面上方播放按钮-->
+    <RelativeLayout
+        android:id="@+id/qcad_music_rl"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/qcad_music_bt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <!--播放结束的大屏展示-->
+    <RelativeLayout
+        android:id="@+id/qcad_last_large_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CB000000"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--icon-->
+            <com.corpize.sdk.ivoice.view.QcadImageView
+                android:id="@+id/qcad_last_large_logo"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ad_test"
+                app:radius="12dp"
+                app:shape_type="rectangle" />
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/qcad_last_large_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--内容-->
+            <TextView
+                android:id="@+id/qcad_last_large_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="56dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <!--详情-->
+            <LinearLayout
+                android:id="@+id/qcad_last_large_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="4dp"
+                android:paddingTop="2dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="2dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/qcad_icon_last_link" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="详情"
+                    android:textColor="#333333"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!--按钮-->
+            <TextView
+                android:id="@+id/qcad_last_large_click"
+                android:layout_width="302dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/qcad_shape_custom_bt"
+                android:gravity="center"
+                android:text="立即下载"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--播放结束的小屏展示-->
+    <RelativeLayout
+        android:id="@+id/qcad_last_small_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CB000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/qcad_last_small_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/qcad_shape_custom_small_background"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+
+            <com.corpize.sdk.ivoice.view.RoundImageView
+                android:id="@+id/qcad_last_small_logo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ad_test" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/qcad_last_small_logo"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qcad_last_small_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/qcad_last_small_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/qcad_last_small_click"
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/qcad_shape_custom_bt"
+                android:gravity="center"
+                android:text="立即下载"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qcad_info_skip_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_info_skip_shape"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/qcad_info_skip_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            tools:text="21" />
+
+        <View
+            android:id="@+id/qcad_info_skip_linear"
+            android:layout_width="1dp"
+            android:layout_height="11dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/qcad_info_skip_timer"
+            android:background="#ffffff"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/qcad_info_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/qcad_info_skip_timer"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/qcad_info_skip_linear"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="跳过"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

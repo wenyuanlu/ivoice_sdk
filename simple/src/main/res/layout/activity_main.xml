@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/menuLayoutStyle">
+        <TextView
+            android:id="@+id/tv_init"
+            style="@style/menuStyle"
+            android:text="获取广告" />
+
+        <TextView
+            android:id="@+id/tv_init_delay"
+            style="@style/menuStyle"
+            android:text="延迟3秒获取广告" />
+
+        <TextView
+            android:id="@+id/tv_inset_custom"
+            style="@style/menuStyle"
+            android:text="自定义嵌入式" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/menuLayoutStyle">
+        <TextView
+            android:id="@+id/tv_goto_custom"
+            style="@style/menuStyle"
+            android:text="自定义嵌入式(列表)" />
+
+        <TextView
+            android:id="@+id/tv_first_voice"
+            style="@style/menuStyle"
+            android:text="首听" />
+
+        <TextView
+            android:id="@+id/tv_voice_custom"
+            style="@style/menuStyle"
+            android:text="冠名" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/menuLayoutStyle">
+        <TextView
+            android:id="@+id/tv_custom_template"
+            style="@style/menuStyle"
+            android:text="自定义渲染模板" />
+
+        <TextView
+            android:id="@+id/tv_roll_ad"
+            style="@style/menuStyle"
+            android:text="贴片广告" />
+
+        <TextView
+            android:id="@+id/tv_custom_viewpager_auto_player"
+            style="@style/menuStyle"
+            android:text="车载自动轮播广告" />
+    </LinearLayout>
+</LinearLayout>
+
+

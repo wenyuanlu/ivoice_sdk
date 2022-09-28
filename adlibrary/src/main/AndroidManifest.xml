@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.corpize.sdk">
+
+    <uses-sdk tools:overrideLibrary="com.ss.android.crash.log, android.support.graphics.drawable.animated,android.support.graphics.drawable, android.support.v4, android.support.mediacompat, android.support.fragment,android.support.coreui, android.support.coreutils, android.support.compat, android.arch.lifecycle,android.arch.lifecycle.livedata.core, android.arch.core, android.arch.lifecycle.viewmodel,com.ss.android.downloadlib, com.ss.android.downloadad, com.ss.android.downloadapi,com.ss.android.socialbase.appdownloader, com.ss.android.socialbase.downloader, com.bun.miitmdid" />
+
+    <!-- 摇一摇需要加入的震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 蓝牙信息 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application android:usesCleartextTraffic="true">
+
+        <!--qc-->
+        <activity
+            android:name=".ivoice.admanager.QcAdDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/QCAd_AppTheme" />
+
+        <activity
+            android:name=".ivoice.admanager.QcAdVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/QCAd_AppVideoTheme" />
+    </application>
+</manifest>

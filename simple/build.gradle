@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.qcaudioad"
+        minSdkVersion 16 //oaid支持最小版本是21,所以修改
+        targetSdkVersion 30
+        versionCode 118
+        versionName "1.1.8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'/*, 'armeabi'*/
+//            abiFilters 'armeabi'
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'paultang'
+            keyPassword 'haohaidevelopthc2019'
+            storeFile file('test.jks')
+            storePassword 'haohaidevelopthc2019'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            keyAlias 'paultang'
+            keyPassword 'haohaidevelopthc2019'
+            storeFile file('test.jks')
+            storePassword 'haohaidevelopthc2019'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //ad sdk need implementation start
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:annotations:4.9.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //library
+//    api project(':adlibrary')
+    implementation(name: 'com.corpize.sdk.ivoice_V1.1.8', ext: 'aar')
+    //导入三方依赖
+    implementation(name: 'oaid_sdk_1.0.30', ext: 'aar')
+    //ad sdk need implementation end
+}

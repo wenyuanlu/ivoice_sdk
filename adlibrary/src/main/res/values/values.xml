@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--企创的插屏弹窗style-->
+    <style name="QcDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--弹窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--全屏即无通知栏-->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--设置动画，在这里使用让它继承系统的Animation.Dialog-->
+        <!--<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+    </style>
+
+    <!--企创的插屏弹窗style 弹窗背景不变暗-->
+    <style name="QcNoBackGroundDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--弹窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--全屏即无通知栏-->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--正常的Dialog提示-->
+    <style name="QcDialog_Adver" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--就是用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5-->
+        <item name="android:backgroundDimAmount">1</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--windowFrame框没有-->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <!--右侧进出弹出消失动画-->
+    <style name="QcDialog_Right.Animation" parent="QcDialog_Adver">
+        <item name="android:windowEnterAnimation">@anim/qcad_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/qcad_out_from_right</item>
+    </style>
+
+    <style name="QCAd_AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="QCAd_AppVideoTheme">
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowActionBar">false</item><!--无ActionBar-->
+        <item name="android:windowFullscreen">true</item><!--全屏即无通知栏-->
+        <item name="android:windowContentOverlay">@null</item><!--是否有遮盖-->
+
+    </style>
+
+    <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

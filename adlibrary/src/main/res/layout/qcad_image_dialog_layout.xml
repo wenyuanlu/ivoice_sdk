@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/qcad_image_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF">
+
+        <ImageView
+            android:id="@+id/qcad_image_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/qcad_shape_image_background"
+            android:padding="6dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/qcad_image_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="12dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/qcad_icon_image_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/qcad_ad_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/qcad_image_down_time"
+            android:layout_width="36dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/qcad_image_ad"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/qcad_shape_down_time"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

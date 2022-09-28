@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/roll_ad_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="#fff">
+
+        <ImageView
+            android:id="@+id/roll_ad_iv_show"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="15dp"
+            tools:background="#FF0000" />
+
+        <TextView
+            android:id="@+id/roll_ad_title_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/roll_ad_iv_show"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="123123123123" />
+
+        <TextView
+            android:id="@+id/roll_ad_source_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/roll_ad_iv_show"
+            android:layout_toEndOf="@id/roll_ad_iv_show"
+            android:background="@drawable/drawable_roll_source_ad_shape"
+            android:paddingStart="3dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="3dp"
+            android:paddingBottom="1dp"
+            android:text="广告"
+            android:textColor="#8784FF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/roll_ad_desc_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/roll_ad_iv_show"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toStartOf="@id/roll_ad_close_show"
+            android:layout_toEndOf="@id/roll_ad_source_show"
+            android:gravity="center_vertical"
+            android:textColor="#cccccc"
+            android:textSize="12sp"
+            tools:text="123456" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/roll_ad_close_show"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/roll_ad_item_layout"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/qcad_icon_image_close" />
+
+</RelativeLayout>
